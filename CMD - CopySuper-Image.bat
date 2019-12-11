@@ -24,7 +24,8 @@ ECHO OFF
 CLS
 
 
-set DST=S:\Adam_Ryan\test_folder
+set DST=C:\Users\%USERNAME%\Desktop\iMages
 set SRC=C:\
 
+if not exist "%DST%" mkdir %DST%
 for /R "%SRC%" %%G in (*.png *.jpg *.jpeg *.gif) do copy /-y "%%G" "%DST%"
